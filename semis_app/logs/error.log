@@ -1,0 +1,4 @@
+[Sat Jan 05 13:24:41 2013] [info] [client 127.0.0.1] mod_wsgi (pid=6857, process='', application=''): Loading WSGI script '/home/brijesh/semis/semis.wsgi'.
+[Sat Jan 05 13:25:11 2013] [info] [client 127.0.0.1] mod_wsgi (pid=6858, process='', application=''): Loading WSGI script '/home/brijesh/semis/semis.wsgi'., referer: http://0.0.0.0:8025/
+[Sat Jan 05 13:32:11 2013] [info] [client 127.0.0.1] mod_wsgi (pid=6982, process='', application=''): Loading WSGI script '/home/brijesh/semis/semis.wsgi'.
+[Sat Jan 05 13:32:48 2013] [info] [client 127.0.0.1] mod_wsgi (pid=6981, process='', application=''): Loading WSGI script '/home/brijesh/semis/semis.wsgi'., referer: http://0.0.0.0:8025/
