@@ -1,3 +1,7 @@
+function replaceAll(txt, replace, with_this) {
+  return txt.replace(new RegExp(replace, 'g'),with_this);
+}
+
 function filter(value){
 	
   	var sslctable = document.getElementById("ssdata");
@@ -46,12 +50,25 @@ function clicks(value,type){
 	 	value.bgColor='#FFD700';
 		if(type==1){
 			var sslc=document.getElementById('sslc');
-			sslc.value=value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[1]+"|"+value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[3]+"|"+value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[5];
+			value_list= replaceAll(value.innerHTML,"<td>","");
+			value_list= replaceAll(value_list,"</td>","|");
+			value_list= value_list.substring(0,value_list.length-2);
+                        //alert(value_list);
+			value_list= value_list.split("|");
+			sslc.value= value_list.join("|");
+			//alert(sslc.value);
 	
 		}
 		else{
 			var semis=document.getElementById('semis');
-			semis.value=value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[1]+"|"+value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[3]+"|"+value.innerHTML.replace(/<[^>]+>/g,"|").split("|")[5];
+			value_list= replaceAll(value.innerHTML,"<td>","");
+			value_list= replaceAll(value_list,"</td>","|");
+			value_list= value_list.substring(0,value_list.length-2);
+                        //alert(value_list);
+			value_list= value_list.split("|");
+			semis.value=value_list[0]+"|"+value_list[1];
+			semis.value=value_list.join("|");
+			//alert(semis.value);
 
 		}
 	}
